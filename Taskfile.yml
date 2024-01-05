@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: '3'
+
+tasks:
+  chezmoi:
+    desc: Install git-remote-gcrypt
+    cmds:
+      - cp -f git-remote-gcrypt ~/bin/git-remote-gcrypt
+      - chmod +x ~/bin/git-remote-gcrypt
+      - chezmoi add ~/bin/git-remote-gcrypt
